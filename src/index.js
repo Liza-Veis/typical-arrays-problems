@@ -1,12 +1,19 @@
+exports.min = function min(array = [0]) {
+  let min = 0;
+  for (let val of array) {
+    if (val < min) min = val;
+  }
+  return min;
+};
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.max = function max(array = [0]) {
+  let max = 0;
+  for (let val of array) {
+    if (val > max) max = val;
+  }
+  return max;
+};
 
-exports.max = function max (array) {
-  return 0;
-}
-
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = function avg(array = [0]) {
+  return array.length > 0 ? array.reduce((a, b) => a + b) / array.length : 0;
+};
